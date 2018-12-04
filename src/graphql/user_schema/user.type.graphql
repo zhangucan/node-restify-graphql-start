@@ -1,0 +1,24 @@
+export default `
+  type User {
+    _id: String,
+    username: String,
+    email: String,
+    nickname: String,
+    photo: String,
+  }
+
+  type Query {
+    allUsers: [User!]!,
+    findUser(_id: String!): User!
+  }
+
+  type Mutation {
+    createUser(
+      username: String,
+      email: String!,
+      password: String!,
+      nickname: String,
+      photo: String
+    ): User!
+  }
+`
